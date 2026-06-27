@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { ArrowRight, Code, Cpu, FolderOpen } from "@phosphor-icons/react";
+import { Code, Cpu, FolderOpen } from "@phosphor-icons/react";
 
 interface Project {
   id: string;

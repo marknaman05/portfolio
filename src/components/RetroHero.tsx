@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { EnvelopeSimple, LinkedinLogo, MapPin } from "@phosphor-icons/react";
+import { MapPin } from "@phosphor-icons/react";
 import { contact } from "../data/resume";
 import avatarPixel from "../assets/avatar-pixel.png";
 import { PixelCat, PixelGear, PixelHeart, PixelSunglasses } from "./PixelStickers";

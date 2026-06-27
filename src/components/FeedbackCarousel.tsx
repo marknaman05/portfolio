@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, ArrowRight, Heart } from "@phosphor-icons/react";
 
 interface Testimonial {
