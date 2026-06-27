@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", var(--font-fallback-sans, system-ui, -apple-system, sans-serif);
+  --font-display: "Young Serif", Georgia, serif;
+  --font-mono: "Space Mono", var(--font-fallback-mono, ui-monospace, monospace);
+  --font-handwritten: "Caveat", "Architects Daughter", cursive;
+  
+  --color-retro-bg: #f4f4f4;
+  --color-retro-card: #ffffff;
+  --color-retro-border: #121212;
+  --color-retro-blue: #2563eb;
+  --color-retro-yellow: #fdf082;
+  --color-retro-pink: #ff6b8b;
+  --color-retro-gray: #71717a;
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-wobble: wobble 5s ease-in-out infinite;
+  --animate-flap: flap 1s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: rotate(-1.5deg);
+  }
+  50% {
+    transform: rotate(1.5deg);
+  }
+}
+
+@keyframes flap {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.6) translateY(2px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Custom Scrollbar for Retro style */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-left: 2px solid #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #121212;
+  border: 1px solid #f4f4f4;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Retro Neo-brutalism Card Style */
+.retro-card {
+  background-color: #ffffff;
+  border: 2.5px solid #121212;
+  box-shadow: 4px 4px 0px 0px #121212;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.retro-card-hover:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px 0px #121212;
+}
+
+.retro-card-active:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #121212;
+}
+
+/* Accent Shadows */
+.shadow-blue {
+  box-shadow: 4px 4px 0px 0px #2563eb;
+}
+.shadow-pink {
+  box-shadow: 4px 4px 0px 0px #ff6b8b;
+}
+.shadow-yellow {
+  box-shadow: 4px 4px 0px 0px #fdf082;
+}
+
+/* Dot Grid Background Pattern */
+.bg-dot-grid {
+  background-image: radial-gradient(#121212 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.bg-dot-grid-light {
+  background-image: radial-gradient(rgba(18, 18, 18, 0.1) 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
+}
+
+/* Handwritten sticky styling */
+.sticky-note {
+  font-family: "Caveat", cursive;
+  background-color: #fdf082;
+  border: 2px solid #121212;
+  box-shadow: 3px 3px 0px 0px #121212;
+}
+
+@layer base {
+  body {
+    background-color: #f4f4f4;
+    color: #121212;
+  }
+}
